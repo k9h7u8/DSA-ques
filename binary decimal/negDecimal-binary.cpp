@@ -19,8 +19,8 @@ int main()
     cout << "Answer:" << answer << endl;
     int newBit = ~answer;
     cout << newBit << endl;
-    int res = newBit + 1;
-    cout << res;
+    // int res = newBit + 1;
+    // cout << res;
     return 0;
 }
 
