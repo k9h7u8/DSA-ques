@@ -17,19 +17,17 @@ void printArray(int arr[], int size)
     cout << endl;
 }
 
-int selectionSort(int arr[], int n)
+int bubbleSort(int arr[], int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
-        int minIndex = i;
-        for (int j = i + 1; j < n; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if (arr[minIndex] > arr[j])
+            if (arr[j] > arr[j + 1])
             {
-                minIndex = j;
+                swap(arr[j], arr[j + 1]);
             }
         }
-        swap(arr[minIndex], arr[i]);
     }
 }
 
@@ -43,7 +41,8 @@ int main()
     getArray(arr, size);
     cout << "Elements of an array " << endl;
     printArray(arr, size);
-    cout << "Elements of an array after sorting: " << selectionSort(arr, size) << endl;
+    cout << "Elements of an array after sorting: " << endl;
+    bubbleSort(arr, size);
     printArray(arr, size);
 
     return 0;
